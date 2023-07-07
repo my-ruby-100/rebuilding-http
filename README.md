@@ -9,6 +9,7 @@
 * [6. Breaking Things](./06/)
 * [7. HTTP and Rack](./07/)
 * [8. HTTP Caching](./08/)
+* [9. Uploading Files](./09/)
 
 ## Ref
 
