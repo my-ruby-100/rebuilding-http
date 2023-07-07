@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rack'
+require 'stringio'
 require 'socket'
 require_relative "blue_eyes/version"
 
@@ -66,8 +68,10 @@ class BlueEyes::Server
   NUM_THREADS =  10
   MAX_WAITING = 20
 
-  def initialize(port)
+  def initialize(port, app)
     @server = TCPServer.new(port)
+    @app = app
+    @port = port
     @queue = Thread::Queue.new
     @pool = (1..NUM_THREADS).map {
       Thread.new{ worker_loop}
@@ -93,7 +97,15 @@ class BlueEyes::Server
       client = @queue.pop
 
       req = BlueEyes::Request.new(client)
-      resp = RUBY_MAIN.match(req)
+      status, headers, app_body = 
+        @app.call(req.env)
+      
+      b_text = String.new
+      app_body.each { |text| b_text.concat(text) }
+
+      resp = BlueEyes::Response.new(b_text,
+        status: status, headers: headers)
+
       client.write resp.to_s
       client.close
     rescue
@@ -108,6 +120,36 @@ class BlueEyes::Request
   attr_reader :url, :method, :body, :form_data, :headers
 
   URLENCODED = 'application/x-www-form-urlencoded'
+
+  def env
+    body = (@body ||
+      String.new).encode(Encoding::ASCII_8BIT)
+      path, query = @url.split("?", 2)
+      env = {
+        "REQUEST_METHOD" => @method,
+        "SCRIPT_NAME" => "",
+        "PATH_INFO" => path,
+        "QUERY_STRING" => query || "",
+        # Possible to get this through DNS
+        "SERVER_NAME" => "localhost",
+        "SERVER_PORT" => "7",
+  
+        # Rack-specific environment
+        "rack.version" => Rack::VERSION,
+        "rack.url_scheme" =>  "http",
+        "rack.input" => StringIO.new(body),
+        "rack.errors" => STDERR,
+        "rack.multithread" => true,
+        "rack.multiprocess" => false,
+        "rack.run_once" => false,
+        "rack.logger" => nil, # logger
+      }
+      @headers.each do |k, v|
+        name = "HTTP_" + k.gsub("-", "_").upcase
+        env[name] = v
+      end
+      env
+  end
 
   def initialize(s)
     parse_req s.gets
