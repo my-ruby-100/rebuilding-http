@@ -2,11 +2,12 @@
 
 |本期版本|上期版本|
 |:---:|:---:|
-|`Fri Jul  7 11:53:06 CST 2023` |
+`Tue Aug  6 14:36:51 CST 2024` | `Fri Jul  7 11:53:06 CST 2023`
 
 ## TCP is Not Our Friend Here
 
 * uses a separator: two newlines in a row
+* 一行中有两个换行，代表请求结束
 
 
 ## Exercises
