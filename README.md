@@ -3,7 +3,7 @@
 * ~~[0. Why Rebuild HTTP?](./00/)~~
 * ~~[1. Listen, Connect, Read, Write](./01/)~~
 * ~~[2. Reading a Request](./02/)~~
-* [3. A Quick Response](./03/)
+* ~~[3. A Quick Response](./03/)~~
 * [4. A Framework](./04/)
 * [5. POST Requests](./05/)
 * [6. Breaking Things](./06/)

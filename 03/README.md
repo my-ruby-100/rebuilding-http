@@ -2,7 +2,7 @@
 
 |本期版本|上期版本|
 |:---:|:---:|
-|`Fri Jul  7 12:15:54 CST 2023` |
+`Tue Aug  6 14:45:41 CST 2024` | `Fri Jul  7 12:15:54 CST 2023`
 
 ## What’s In a Response?
 
@@ -10,6 +10,8 @@
 * The lines with `<` are the response that the server sends back
 
 ## A Less-Canned Response
+
+> `\n` 已经通过换行带上了
 
 ```ruby
 rsp = <<TEXT
