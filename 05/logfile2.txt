@@ -1,0 +1,30 @@
+== Info:   Trying [::1]:4321...
+== Info: connect to ::1 port 4321 failed: Connection refused
+== Info:   Trying 127.0.0.1:4321...
+== Info: Connected to localhost (127.0.0.1) port 4321
+=> Send header, 147 bytes (0x93)
+0000: 50 4f 53 54 20 2f 20 48 54 54 50 2f 31 2e 31 0d POST / HTTP/1.1.
+0010: 0a 48 6f 73 74 3a 20 6c 6f 63 61 6c 68 6f 73 74 .Host: localhost
+0020: 3a 34 33 32 31 0d 0a 55 73 65 72 2d 41 67 65 6e :4321..User-Agen
+0030: 74 3a 20 63 75 72 6c 2f 38 2e 34 2e 30 0d 0a 41 t: curl/8.4.0..A
+0040: 63 63 65 70 74 3a 20 2a 2f 2a 0d 0a 43 6f 6e 74 ccept: */*..Cont
+0050: 65 6e 74 2d 4c 65 6e 67 74 68 3a 20 31 31 0d 0a ent-Length: 11..
+0060: 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 70 Content-Type: ap
+0070: 70 6c 69 63 61 74 69 6f 6e 2f 78 2d 77 77 77 2d plication/x-www-
+0080: 66 6f 72 6d 2d 75 72 6c 65 6e 63 6f 64 65 64 0d form-urlencoded.
+0090: 0a 0d 0a                                        ...
+=> Send data, 11 bytes (0xb)
+0000: 70 31 3d 76 31 26 70 32 3d 76 32                p1=v1&p2=v2
+<= Recv header, 16 bytes (0x10)
+0000: 48 54 54 50 2f 31 2e 31 20 32 30 30 20 4f 4b 0a HTTP/1.1 200 OK.
+<= Recv header, 25 bytes (0x19)
+0000: 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 74 65 Content-Type: te
+0010: 78 74 2f 70 6c 61 69 6e 0a                      xt/plain.
+== Info: no chunk, no close, no size. Assume close to signal end
+<= Recv header, 1 bytes (0x1)
+0000: 0a                                              .
+<= Recv data, 26 bytes (0x1a)
+0000: 59 6f 75 20 74 68 69 73 20 66 72 6f 6d 20 74 68 You this from th
+0010: 65 20 43 6f 6e 73 6f 6c 65 0a                   e Console.
+<= Recv data, 1 bytes (0x1)
+0000: 0a                                              .

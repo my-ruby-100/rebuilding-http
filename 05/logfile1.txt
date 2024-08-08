@@ -1,0 +1,22 @@
+== Info:   Trying [::1]:4321...
+== Info: Connected to localhost (::1) port 4321
+=> Send header, 147 bytes (0x93)
+0000: POST / HTTP/1.1
+0011: Host: localhost:4321
+0027: User-Agent: curl/8.4.0
+003f: Accept: */*
+004c: Content-Length: 11
+0060: Content-Type: application/x-www-form-urlencoded
+0091: 
+=> Send data, 11 bytes (0xb)
+0000: p1=v1&p2=v2
+<= Recv header, 16 bytes (0x10)
+0000: HTTP/1.1 200 OK.
+<= Recv header, 25 bytes (0x19)
+0000: Content-Type: text/plain.
+== Info: no chunk, no close, no size. Assume close to signal end
+<= Recv header, 1 bytes (0x1)
+0000: .
+<= Recv data, 29 bytes (0x1d)
+0000: Hello From a Library, World!.
+== Info: Closing connection

@@ -5,7 +5,7 @@
 * ~~[2. Reading a Request](./02/)~~
 * ~~[3. A Quick Response](./03/)~~
 * ~~[4. A Framework](./04/)~~
-* [5. POST Requests](./05/)
+* ~~[5. POST Requests](./05/)~~
 * [6. Breaking Things](./06/)
 * [7. HTTP and Rack](./07/)
 * [8. HTTP Caching](./08/)
