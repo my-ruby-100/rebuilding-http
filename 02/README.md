@@ -2,7 +2,7 @@
 
 |本期版本|上期版本|
 |:---:|:---:|
-`Wed Aug  7 23:10:47 CST 2024` | `Fri Jul  7 11:53:06 CST 2023`
+`Fri Aug  9 12:05:42 CST 2024` | `Fri Jul  7 11:53:06 CST 2023`
 
 ## TCP is Not Our Friend Here
 
@@ -34,6 +34,12 @@ curl --get -d search=delicious "http://localhost:4321/my/url?page=7"
 # Authorization: Basic Ym9ibzpib2JvcHdk
 curl -u bobo:bobopwd --basic http://localhost:4321
 ```
+
+## References
+
+> The WWW Common Gateway Interface Version 1.1
+
+* <https://github.com/ruby/webrick/blob/master/lib/webrick/httprequest.rb#L403C19-L403C43>
 
 ## Ref
 

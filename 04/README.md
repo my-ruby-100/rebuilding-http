@@ -2,7 +2,7 @@
 
 |本期版本|上期版本|
 |:---:|:---:|
-`Thu Aug  8 00:31:30 CST 2024` | `Fri Jul  7 12:58:54 CST 2023`
+`Fri Aug  9 14:00:38 CST 2024` | `Fri Jul  7 12:58:54 CST 2023`
 
 
 ## A Simple Server
@@ -13,10 +13,19 @@
 
 * <https://sinatrarb.com/intro.html>
 
+
+## The Main Object
+
+* `self`
+
 ## In Which We Write a DSL
 
 ```bash
 ruby -rname_of_require
+```
+
+```bash
+at_exit
 ```
 
 ```bash
@@ -32,4 +41,10 @@ those are for a regular expression
 
 ```ruby
 'no-frank'[/frank/]
+'no-frank'.slice /frank/
 ```
+
+
+## Ref
+
+* <https://ruby-doc.org/3.2.2/Enumerable.html#method-i-find>
