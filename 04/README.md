@@ -4,6 +4,11 @@
 |:---:|:---:|
 `Fri Aug  9 14:00:38 CST 2024` | `Fri Jul  7 12:58:54 CST 2023`
 
+## Libraries, Ruby Style
+
+```bash
+bundle gem blue_eyes
+```
 
 ## A Simple Server
 
