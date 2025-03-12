@@ -12,6 +12,9 @@ module RHTTP
     out = ""
     loop do
       line = sock.gets
+
+      # todo: 分析一下
+      # 用 `\n`、替换 `\r\n` 应该是后续方便在系统终端显示
       out << line.chomp << "\n"
       return(out) if line.strip == ""
     end

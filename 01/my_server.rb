@@ -1,8 +1,8 @@
 require 'socket'
 
 RESP = <<TEXT
-HTTP/1.1 200 OK
-Content-Type: text/plain
+HTTP/1.1 200 OK\r
+Content-Type: text/plain\r
 
 Hello World!
 TEXT

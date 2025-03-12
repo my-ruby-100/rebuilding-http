@@ -2,7 +2,7 @@
 
 |本期版本|上期版本|
 |:---:|:---:|
-`Fri Aug  9 13:03:06 CST 2024` | `Fri Jul  7 12:15:54 CST 2023`
+`Wed Mar 12 10:00:43 CST 2025` | `Fri Jul  7 12:15:54 CST 2023`
 
 ## What’s In a Response?
 
@@ -26,6 +26,7 @@ puts rsp.inspect
 
 ## When Bad Things Happen to Good Servers
 
+> 容错处理: 解析不正确的请求
 
 ```bash
 nc localhost 4321
@@ -40,3 +41,7 @@ GET htetrejbreewjrnlkjke
 ```ruby
 Time.now.httpdate
 ```
+
+**Exercise Three: the Browser**
+
+* `favicon.ico`
