@@ -14,8 +14,8 @@ loop do
   loop do
     line = client.gets
     puts line.inspect
-    # 本节重点，
-    break if line.strip == ""
+    # # 本节重点，
+    # break if line.strip == ""
   end
 
   client.write RESP
