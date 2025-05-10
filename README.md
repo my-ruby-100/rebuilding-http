@@ -26,4 +26,4 @@
 
 * <https://rebuilding-http.com/>
 * <https://github.com/noahgibbs/rebuilding_http>
-* <<https://github.com/noahgibbs/testing_rebuilding_http>
+* <https://github.com/noahgibbs/testing_rebuilding_http>
